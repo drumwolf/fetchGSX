@@ -21,6 +21,7 @@ When you click "NEW", select "Google Sheets" to create a new Google spreadsheet 
 
 When you publish to the web, you'll get a direct link to the spreadsheet document that will look something like this:
 `https://docs.google.com/spreadsheets/d/[SPREADSHEET-ID]/pubhtml`
+
 [SPREADSHEET-ID] is the unique ID for each and every Google Docs spreadsheet document.  You will use this ID number to access JSON data from your particular document.
 
 ### ParseGSX for Node.js
