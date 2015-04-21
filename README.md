@@ -6,6 +6,14 @@ This project consists of a pair of JavaScript modules which will parse a Google 
 
 ## Setup
 
-We will assume that you already have both of the following:  a Google Drive account, and Node.js installed on your computer.
+We will assume that you already have the following:  
+- a Google Drive account
+- Node.js installed on your computer (if you are using `parse-gsx-node.js`)
+- JQuery available for use (if you are using `parse-gsx-ajax.js`)
+
+### Google Spreadsheet
+
+
+
 
 
