@@ -17,7 +17,15 @@ If you have a Gmail address or a YouTube account, you should also have access to
 
 If you're logged into your Google account, go here:  https://drive.google.com/drive/my-drive
 
-When you click "NEW", select "Google Sheets" to create a new Google spreadsheet document.
+When you click "NEW", select "Google Sheets" to create a new Google spreadsheet document.  The first row will consist of the labels for each column, which will be converted to object keys for each entry.  When you're finished, publish the spreadsheet online by selecting "File" -> "Publish to the Web."
+
+When you publish to the web, you'll get a direct link to the spreadsheet document that will look something like this:
+`https://docs.google.com/spreadsheets/d/[SPREADSHEET-ID]/pubhtml`
+[SPREADSHEET-ID] is the unique ID for each and every Google Docs spreadsheet document.  You will use this ID number to access JSON data from your particular document.
+
+### ParseGSX for Node.js
+
+
 
 
 
