@@ -16,6 +16,7 @@ We will assume that you already have the following:
 If you have a Gmail address or a YouTube account, you should also have access to Google Docs.  All of them are under the same Google account.
 
 If you're logged into your Google account, go here:  https://drive.google.com/drive/my-drive
+
 When you click "NEW", select "Google Sheets" to create a new Google spreadsheet document.
 
 
