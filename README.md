@@ -25,14 +25,15 @@ When you publish to the web, you'll get a direct link to the spreadsheet documen
 
 ### ParseGSX for Node.js
 
-Download `parse-gsx-node.js` into your project.  In your primary JS code, you will import the parse-gsx-node module by using a line of code similar to this:  
-`var parseGSX = require("./parse-gsx-node.js");`
+Download `parse-gsx-node.js` into your project, and require that file in your primary JS code.  Execute the module simply by passing in two arguments:  the ID of the Google Docs spreadsheet, and a callback to parse the cleaned-up JSON data that the parseGSX module produces.
 
-Execute `parseGSX` simply by passing in two arguments:  the ID of the Google Docs spreadsheet, and a callback to parse the cleaned-up JSON data that the parseGSX module produces:
+To demonstrate how easy it is, here is an example of how to use the ParseGSX module:
 
-`parseGSX(GOOGLE-SPREADSHEET-ID, CUSTOM-CALLBACK-FUNCTION)`
-
-In this repository is a sample JS file called `read-data-node.js` which provides an example of how to execute the parseGSX Node module.
-
-
-
+```
+var parseGSX = require("./parse-gsx-node.js");
+var yourSpreadsheetID = "YOUR-SPREADSHEET-ID";
+var yourCustomCallback = function(data){
+	console.log(data);
+}
+parseGSX(yourSpreadsheetID, yourCustomCallback);
+```
