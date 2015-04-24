@@ -15,13 +15,14 @@ var ParseGSX = (function() {
       }
       finalData.push(parsedObject);
     });
-    var processGSXData = callback || _defaultCallback;
+    var processGSXData = _defaultCallback;
     processGSXData(finalData);
   };
 
   var parseGSX = function(spreadsheetID, callback) {
     var url = "http://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
     var ajax = $.ajax(url);
+    if (callback) { _defaultCallback = callback; }
     $.when(ajax).then(_parseRawData);
   };
 
