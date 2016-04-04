@@ -1,3 +1,8 @@
+# fetchGSX
+
+This is an extension of an earlier project I built last year called `parseGSX`, when I was first learning to use Node.  The readme for this new project is still in progress, but for now here's the readme for the old `parseGSX` project for a little bit of context.
+
+
 # parse-gsx
 This project consists of a pair of JavaScript modules which will parse a Google spreadsheet document and render clean, readable JSON data for you to process as you wish.
 
