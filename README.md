@@ -27,20 +27,6 @@ When you publish to the web, you'll get a direct link to the spreadsheet documen
 
 ### Using fetchGSX in your npm project
 
-Once you've imported the fetchGSX module into your primary JS code, you can execute the module simply by passing in two arguments:  the ID of the Google Docs spreadsheet, and a callback to parse the cleaned-up JSON data that the parseGSX module produces.
+Once you've imported the module into your primary JS code, you can execute fetchGSX simply by passing in two arguments:  (1) the ID of the Google Docs spreadsheet, and (2) the custom callback that parses the cleaned-up JSON data that the parseGSX module produces.   `main.js` provides basic sample code for using fetchGSX.
 
-To demonstrate how easy it is, here is an example of how to use the fetchGSX module:
-
-```
-var fetchGSX = require("./fetchGSX.js");
-
-// the ID of your Google spreadsheet document
-var yourSpreadsheetID = "YOUR-SPREADSHEET-ID";
-
-// your custom callback to process the json data that is returned by fetchGSX
-var yourCustomCallback = function(data){
-	console.log(data);
-}
-
-fetchGSX(yourSpreadsheetID, yourCustomCallback);
-```
+If you are familiar with module loaders such as browserify or webpack, you can use either of them to compile `main.js` into a final bundled JS file that will be loaded into your site.
