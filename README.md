@@ -1,10 +1,10 @@
 # fetchGSX
-This project involves a JavaScript module called `fetchGSX` which will parse the data from a Google spreadsheet document and render clean, readable JSON for you to process as you wish.  It uses the *[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)* API to retrieve this data via an http 'get' request to Google's API.
+This project involves a JavaScript module called `fetchGSX` which will parse the data from a Google spreadsheet document and render clean, readable JSON for you to process as you wish.  It uses the **[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)** API to retrieve this data via an http 'get' request to Google's API.
 
 The files in this repo consist of:
 
 - `fetchGSX.js` - the actual module itself
-- `main.js` - a secondary JS file which imports the `fetchGSX` module and defines the spreadsheet ID and the custom user-created callback that is passed into the module.  
+- `main.js` - a secondary JS file which imports the module and defines the spreadsheet ID and the custom user-created callback that is passed into the module.  
 
 ## Setup
 
