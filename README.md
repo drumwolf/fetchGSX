@@ -25,7 +25,11 @@ When you publish to the web, you'll get a direct link to the spreadsheet documen
 
 [SPREADSHEET-ID] is the unique ID for each and every Google Docs spreadsheet document.  You will use this ID to access JSON data from your particular document.
 
-### Using fetchGSX in your npm project
+## So why use fetchGSX?
+
+If you can retrieve JSON data from the contents of your Google spreadsheet document, why use this module?  Why not just do an ajax, XMLHTTPRequest, or fetch call directly to Google's API?   Because the data that Google directly sends you is incredibly messy with a lot of junk.  FetchGSX will clean up all of that junk and return a neat JSON object with only the data you need.
+
+## Implementation
 
 Once you've imported the module into your primary JS code, you can execute fetchGSX simply by passing in two arguments:  (1) the ID of the Google Docs spreadsheet, and (2) the custom callback that parses the cleaned-up JSON data that the parseGSX module produces.   `main.js` provides basic sample code for using fetchGSX.
 
