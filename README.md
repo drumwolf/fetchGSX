@@ -27,11 +27,9 @@ When you publish to the web, you'll get a direct link to the spreadsheet documen
 
 ## So why use fetchGSX?
 
-If you can retrieve JSON data from the contents of your Google spreadsheet document, why use this module?  Why not just do an ajax, XMLHTTPRequest, or fetch call directly to Google's API?   Because the data that Google directly sends you is incredibly messy with a lot of junk.  FetchGSX will clean up all of that junk and return a neat JSON object with only the data you need.
+If you can retrieve JSON data from the contents of your Google spreadsheet document, why use this module?  Why not just do an ajax, XMLHTTPRequest, or fetch call directly to Google's API?
 
-For example, imagine that you have a Google spreadsheet with two column labels: "firstname" and "lastname."  And the data includes an entry for John Doe.
-
-When you first retrieve the JSON data from Google Docs API, it looks something like this:
+Because the data that Google directly sends you is incredibly messy with a lot of junk.  For example, imagine that you have a Google spreadsheet with two column labels: "firstname" and "lastname," and the data includes an entry for John Doe.  When you first retrieve the JSON data from Google Docs API, it looks something like this:
 ```
 {
   encoding: 'UTF-8',
@@ -55,9 +53,7 @@ When you first retrieve the JSON data from Google Docs API, it looks something l
   version: '1.0'
 }
 ```
-You get the idea.  That's a lot of junk to sort out, and that's exactly what fetchGSX does.  
-
-After fetchGSX has cleaned up the data, here's what the JSON object looks like:
+You get the idea.  That's a lot of junk to sort out, and that's exactly what fetchGSX does.  It cleans up all of that junk and return a neat JSON object with only the data you need.  Once it's done, here's what the JSON object looks like:
 ```
 [
   {
@@ -67,7 +63,6 @@ After fetchGSX has cleaned up the data, here's what the JSON object looks like:
   ...
 ]
 ```
-
 
 ## Implementation
 
