@@ -29,6 +29,47 @@ When you publish to the web, you'll get a direct link to the spreadsheet documen
 
 If you can retrieve JSON data from the contents of your Google spreadsheet document, why use this module?  Why not just do an ajax, XMLHTTPRequest, or fetch call directly to Google's API?   Because the data that Google directly sends you is incredibly messy with a lot of junk.  FetchGSX will clean up all of that junk and return a neat JSON object with only the data you need.
 
+For example, imagine that you have a Google spreadsheet with two column labels: "firstname" and "lastname."  And the subsequent rows are entries for John Doe and Jane Doe.
+
+You would expect the JSON data to look something like this:
+```
+[
+  {
+    firstname: 'John',
+    lastname: 'Doe'
+  },
+  {
+    firstname: 'Jane',
+    lastname: 'Doe'
+  }
+]
+```
+Nope!  When you first retrieve the JSON data from Google Docs API, it looks something like this:
+```
+{
+  encoding: 'UTF-8',
+  feed: {
+    ...
+    entry: [
+      {
+        ...
+        gsx$firstname: {
+          $t: 'John'
+        },
+        gsx$lastname: {
+          $t: 'Doe'
+        }
+        ...
+      },
+      ....
+    ],
+    ...
+  },
+  version: '1.0'
+}
+```
+You get the idea.  That's a lot of junk to sort out, and that's exactly what fetchGSX does.
+
 ## Implementation
 
 Once you've imported the module into your primary JS code, you can execute fetchGSX simply by passing in two arguments:  (1) the ID of the Google Docs spreadsheet, and (2) the custom callback that parses the cleaned-up JSON data that the parseGSX module produces.   `main.js` provides basic sample code for using fetchGSX.
